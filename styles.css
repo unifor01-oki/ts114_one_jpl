@@ -9,7 +9,7 @@ body {
                  'Apple SD Gothic Neo', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #ffffff;
+    background-color: #f5f5f5;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -93,7 +93,7 @@ body {
 .service-card {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     color: inherit;
@@ -104,25 +104,27 @@ body {
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.card-content {
-    padding: 40px 30px;
-    text-align: center;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
     overflow: hidden;
     background-color: #f5f5f5;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    border-top: 1px solid #e0e0e0;
+}
+
+.card-content {
+    padding: 30px 25px;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-image img {
@@ -142,71 +144,43 @@ body {
     display: none;
 }
 
-.card-icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-icon svg {
-    width: 100%;
-    height: 100%;
-}
-
-.offline-icon {
-    color: #FFD700;
-}
-
-.online-icon {
-    color: #FFD700;
-}
-
-.online-icon svg {
-    fill: #FFD700;
-}
-
-.resource-icon {
-    color: #FFD700;
-}
-
-.card-top-title {
-    font-size: 12px;
-    color: #666666;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
 .card-main-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: #000000;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    line-height: 1.2;
 }
 
-.card-title-english {
-    font-size: 20px;
+.card-subtitle {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 12px;
     font-weight: 400;
-    display: block;
-    margin-top: 4px;
 }
 
 .card-description {
     font-size: 14px;
     color: #666666;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     line-height: 1.6;
+    flex: 1;
 }
 
-.card-link {
-    display: inline-block;
-    color: #4A90E2;
+.card-button {
+    background-color: #4A90E2;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 6px;
     font-size: 14px;
     font-weight: 500;
-    transition: color 0.3s ease;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.service-card:hover .card-button {
+    background-color: #357ABD;
 }
 
 /* Footer Styles */
@@ -295,11 +269,15 @@ body {
     }
 
     .card-content {
-        padding: 30px 20px;
+        padding: 25px 20px;
     }
 
     .card-image {
-        height: 150px;
+        height: 180px;
+    }
+
+    .card-main-title {
+        font-size: 22px;
     }
 
     .footer-content {
@@ -335,7 +313,11 @@ body {
     }
 
     .card-main-title {
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .card-image {
+        height: 160px;
     }
 }
 
